@@ -1,7 +1,7 @@
 
 export default {
   state: {
-    message: 'Welcome to Umi',
+    message: 'Umi TypeScript Template',
   },
 }
 

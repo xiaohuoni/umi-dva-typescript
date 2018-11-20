@@ -9,8 +9,17 @@ let Router = require('dva/router').routerRedux.ConnectedRouter;
 let routes = [
   {
     "path": "/",
-    "exact": true,
-    "component": require('../index.tsx').default
+    "component": require('../../layouts/index.tsx').default,
+    "routes": [
+      {
+        "path": "/",
+        "exact": true,
+        "component": require('../index.tsx').default
+      },
+      {
+        "component": () => React.createElement(require('/Users/xiaohuoni/Documents/dev/umi-ts-app/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', hasRoutesInConfig: false })
+      }
+    ]
   },
   {
     "component": () => React.createElement(require('/Users/xiaohuoni/Documents/dev/umi-ts-app/node_modules/umi-build-dev/lib/plugins/404/NotFound.js').default, { pagesPath: 'src/pages', hasRoutesInConfig: false })

@@ -2,7 +2,7 @@ import * as React from "react";
 import styles from "./index.css";
 import { connect } from "dva";
 
-import logo from "./logo.png";
+import logo from "../assets/logo.png";
 
 interface PageProps {
   dispatch: any;
