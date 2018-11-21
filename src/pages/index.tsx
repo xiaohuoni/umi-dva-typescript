@@ -2,8 +2,6 @@ import * as React from "react";
 import styles from "./index.css";
 import { connect } from "dva";
 
-import logo from "../assets/yay.jpg";
-
 interface PageProps {
   dispatch: any;
   location: any;
