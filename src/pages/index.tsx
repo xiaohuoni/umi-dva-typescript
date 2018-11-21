@@ -2,7 +2,7 @@ import * as React from "react";
 import styles from "./index.css";
 import { connect } from "dva";
 
-import logo from "../assets/logo.png";
+import logo from "../assets/yay.jpg";
 
 interface PageProps {
   dispatch: any;
@@ -14,17 +14,23 @@ interface PageProps {
 class App extends React.Component<PageProps> {
   public render() {
     const { message } = this.props;
-    
+
     return (
-      <div className={styles.App}>
-        <header className={styles.header}>
-          <img src={logo} className={styles.logo} alt="logo" />
-          <h1 className={styles.title}>{message}</h1>
-        </header>
-        <p className={styles.intro}>
-          To get started, edit <code>src/pages/index.tsx</code> and save to
-          reload.
-        </p>
+      <div className={styles.normal}>
+        <div className={styles.welcome} />
+        <h1 className={styles.title}>{message}</h1>
+
+        <ul className={styles.list}>
+          <li>
+            To get started, edit <code>src/pages/index.js</code> and save to
+            reload.
+          </li>
+          <li>
+            <a href="https://umijs.org/guide/getting-started.html">
+              Getting Started
+            </a>
+          </li>
+        </ul>
       </div>
     );
   }
